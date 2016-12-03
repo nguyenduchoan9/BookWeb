@@ -14,6 +14,7 @@ namespace BookManagement.Models
     
     public partial class BookStatu
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public BookStatu()
         {
             this.Books = new HashSet<Book>();
@@ -22,6 +23,7 @@ namespace BookManagement.Models
         public int ID { get; set; }
         public string Name { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Book> Books { get; set; }
     }
 }

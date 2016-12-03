@@ -186,61 +186,61 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Author.cs">
-      <DependentUpon>Books.tt</DependentUpon>
+      <DependentUpon>BookEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Authors\Author.cs" />
     <Compile Include="Models\Book.cs">
-      <DependentUpon>Books.tt</DependentUpon>
+      <DependentUpon>BookEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Books.Context.cs">
+    <Compile Include="Models\BookEntity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Books.Context.tt</DependentUpon>
+      <DependentUpon>BookEntity.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Books.cs">
+    <Compile Include="Models\BookEntity.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Books.tt</DependentUpon>
+      <DependentUpon>BookEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Books.Designer.cs">
+    <Compile Include="Models\BookEntity.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Books.edmx</DependentUpon>
+      <DependentUpon>BookEntity.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\BookStatu.cs">
-      <DependentUpon>Books.tt</DependentUpon>
+      <DependentUpon>BookEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Books\Book.cs" />
     <Compile Include="Models\Genre.cs">
-      <DependentUpon>Books.tt</DependentUpon>
+      <DependentUpon>BookEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Genres\Genres.cs" />
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>BookEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderDetail.cs">
+      <DependentUpon>BookEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderStatu.cs">
+      <DependentUpon>BookEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Publisher.cs">
+      <DependentUpon>BookEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Publishers\Publishers.cs" />
+    <Compile Include="Models\Role.cs">
+      <DependentUpon>BookEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Role\RoleModel.cs" />
     <Compile Include="Models\Status\BookStatuses.cs" />
     <Compile Include="Models\Status\UserStatus.cs" />
+    <Compile Include="Models\User.cs">
+      <DependentUpon>BookEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\UserStatu.cs">
-      <DependentUpon>Books.tt</DependentUpon>
+      <DependentUpon>BookEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User\UserModel.cs" />
-    <Compile Include="Models\Order.cs">
-      <DependentUpon>Books.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OrderDetail.cs">
-      <DependentUpon>Books.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OrderStatu.cs">
-      <DependentUpon>Books.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Publisher.cs">
-      <DependentUpon>Books.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Role.cs">
-      <DependentUpon>Books.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\User.cs">
-      <DependentUpon>Books.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -278,23 +278,6 @@
     <Content Include="Content\Img\Books\LOR2.JPG" />
     <Content Include="Content\Scripts\bootstrap.js" />
     <Content Include="Content\Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Books.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Books.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Books.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Books.edmx</DependentUpon>
-      <LastGenOutput>Books.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Books.edmx.diagram">
-      <DependentUpon>Books.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\Books.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Books.edmx</DependentUpon>
-      <LastGenOutput>Books.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.woff" />
@@ -317,6 +300,16 @@
     <Content Include="Content\Scripts\respond.min.js" />
     <Content Include="Content\Scripts\script.slider.js" />
     <Content Include="Content\Scripts\_references.js" />
+    <Content Include="Models\BookEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookEntity.edmx</DependentUpon>
+      <LastGenOutput>BookEntity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BookEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookEntity.edmx</DependentUpon>
+      <LastGenOutput>BookEntity.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -351,6 +344,13 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <EntityDeploy Include="Models\BookEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BookEntity.edmx.diagram">
+      <DependentUpon>BookEntity.edmx</DependentUpon>
+    </Content>
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>

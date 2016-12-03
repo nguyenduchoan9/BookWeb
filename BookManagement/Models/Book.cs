@@ -14,6 +14,7 @@ namespace BookManagement.Models
     
     public partial class Book
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Book()
         {
             this.OrderDetails = new HashSet<OrderDetail>();
@@ -34,6 +35,7 @@ namespace BookManagement.Models
         public System.DateTime PublishedDate { get; set; }
     
         public virtual Author Author { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual BookStatu BookStatu { get; set; }
         public virtual Genre Genre { get; set; }

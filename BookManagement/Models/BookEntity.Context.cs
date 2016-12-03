@@ -34,7 +34,7 @@ namespace BookManagement.Models
         public virtual DbSet<OrderStatu> OrderStatus { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<UserStatu> UserStatus { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserStatu> UserStatus { get; set; }
     }
 }
