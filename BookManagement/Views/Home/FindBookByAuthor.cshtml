@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+@model PagedList.IPagedList<BookManagement.Models.Book>
+@using PagedList.Mvc
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                @foreach (var item in Model)
+                {
+                    <div class="product-gallery-author text-center col-lg-3">
+                        <div class="product-upper">
+                            <img src="@Url.Content("~/Content/Img/Books/" + item.Img_Link)" alt="@item.Name">
+                        </div>
+                        <h5><a href="">@item.Name</a></h5>
+
+                        <div class="product-carousel-price">
+                            <ins>@item.Price</ins> @*<del>$100.00</del>*@
+                        </div>
+                        <div class="product-option-shop">
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>

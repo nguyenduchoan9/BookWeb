@@ -1,0 +1,51 @@
+D:\C#\BookManagement\BookManagement.DataAccess\bin\BookManagement.DataAccess.dll.config
+D:\C#\BookManagement\BookManagement.DataAccess\bin\BookManagement.DataAccess.dll
+D:\C#\BookManagement\BookManagement.DataAccess\bin\BookManagement.DataAccess.pdb
+D:\C#\BookManagement\BookManagement.DataAccess\bin\EntityFramework.dll
+D:\C#\BookManagement\BookManagement.DataAccess\bin\EntityFramework.SqlServer.dll
+D:\C#\BookManagement\BookManagement.DataAccess\bin\Newtonsoft.Json.dll
+D:\C#\BookManagement\BookManagement.DataAccess\bin\PagedList.dll
+D:\C#\BookManagement\BookManagement.DataAccess\bin\PagedList.Mvc.dll
+D:\C#\BookManagement\BookManagement.DataAccess\bin\System.Net.Http.Formatting.dll
+D:\C#\BookManagement\BookManagement.DataAccess\bin\System.Web.Http.dll
+D:\C#\BookManagement\BookManagement.DataAccess\bin\System.Web.Http.WebHost.dll
+D:\C#\BookManagement\BookManagement.DataAccess\bin\EntityFramework.xml
+D:\C#\BookManagement\BookManagement.DataAccess\bin\EntityFramework.SqlServer.xml
+D:\C#\BookManagement\BookManagement.DataAccess\bin\PagedList.xml
+D:\C#\BookManagement\BookManagement.DataAccess\bin\PagedList.Mvc.xml
+D:\C#\BookManagement\BookManagement.DataAccess\bin\Newtonsoft.Json.xml
+D:\C#\BookManagement\BookManagement.DataAccess\bin\System.Net.Http.Formatting.xml
+D:\C#\BookManagement\BookManagement.DataAccess\bin\System.Web.Http.xml
+D:\C#\BookManagement\BookManagement.DataAccess\bin\System.Web.Http.WebHost.xml
+D:\C#\BookManagement\BookManagement.DataAccess\obj\Debug\BookManagement.DataAccess.csprojResolveAssemblyReference.cache
+D:\C#\BookManagement\BookManagement.DataAccess\obj\Debug\BookManagement.DataAccess.dll
+D:\C#\BookManagement\BookManagement.DataAccess\obj\Debug\BookManagement.DataAccess.pdb
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\BookManagement.DataAccess.dll.config
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\BookManagement.DataAccess.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\BookManagement.DataAccess.pdb
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\EntityFramework.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\EntityFramework.SqlServer.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\Newtonsoft.Json.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\PagedList.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\PagedList.Mvc.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Net.Http.Formatting.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Web.Http.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Web.Http.WebHost.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Web.WebPages.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Web.Razor.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Web.WebPages.Deployment.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\EntityFramework.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\EntityFramework.SqlServer.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\PagedList.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\PagedList.Mvc.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\Newtonsoft.Json.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Net.Http.Formatting.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Web.Http.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Web.Http.WebHost.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Web.WebPages.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Web.Razor.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\bin\System.Web.WebPages.Deployment.xml
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\obj\Debug\BookManagement.DataAccess.dll
+C:\Users\NHAT NAM\Desktop\BookManagement\BookManagement.DataAccess\obj\Debug\BookManagement.DataAccess.pdb

@@ -1,0 +1,4 @@
+D:\C#\BookManagement\bin\Debug\BookManagement.dll
+D:\C#\BookManagement\bin\Debug\BookManagement.pdb
+D:\C#\BookManagement\obj\Debug\BookManagement.dll
+D:\C#\BookManagement\obj\Debug\BookManagement.pdb

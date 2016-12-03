@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "InsertBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var authors = (List<BookManagement.Models.Authors.Author>)ViewBag.BookAuthor;
+    var genres = (List<BookManagement.Models.Genres.Genres>)ViewBag.BookGenres;
+    var publisher = (List<BookManagement.Models.Publishers.Publishers>)ViewBag.BookPublisher;
+    var status = (List<BookManagement.Models.Status.BookStatuses>)ViewBag.BookStatus;
+}
+@using BookManagement.Models.Books
+@model AddBookView
+<div class="container">
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Insert book</div>
+            </div>
+            <div style="padding-top:30px" class="panel-body">
+                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                @using (Html.BeginForm("InsertBook", "Home", FormMethod.Post, new { @class = "form-horizontal", @id = "loginform", @role = "form", enctype = "multipart/form-data" }))
+                {
+                    
+                    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                    <div class="row signup-row">
+                        <label class="col-md-3 control-label">Name</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="row signup-row">
+                        <label class="col-md-3 control-label">Description</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="row signup-row">
+                        <label class="col-md-3 control-label">Genre</label>
+                        <div class="col-md-9">
+
+                            @Html.DropDownListFor(m => m.GenreID, new SelectList(genres, "ID", "Name"), "Select genre...")
+                        </div>
+                    </div>
+                    <div class="row signup-row">
+                        <label class="col-md-3 control-label">Author</label>
+                        <div class="col-md-9">
+
+                            @Html.DropDownListFor(m => m.AuthorID, new SelectList(authors, "ID", "Name"), "Select author...")
+                        </div>
+                    </div>
+                    <div class="row signup-row">
+                        <label class="col-md-3 control-label">Publisher</label>
+                        <div class="col-md-9">
+
+                            @Html.DropDownListFor(m => m.PublisherID, new SelectList(publisher, "ID", "Name"), "Select publisher...")
+                        </div>
+                    </div>
+                    <div class="row signup-row">
+                        <label class="col-md-3 control-label">Price</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row signup-row">
+                        <label for="icode" class="col-md-3 control-label">Published Date</label>
+                        <div class='input-group date col-md-8' id='datetimepicker1'>
+
+                            @*<input class="form-control" name="registration_date" id="registration-date" type="date">*@
+                            @Html.TextBoxFor(m => m.PublishedDate, "YYYY-MM-DD", new { @class = "form-control", @name = "registration_date", @id = "registration-date", @type = "date" })
+                            @*<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></span>*@
+                        </div>
+
+                    </div>
+                    <div class="row signup-row">
+                        <label class="col-md-3 control-label">Status</label>
+                        <div class="col-md-9">
+
+                            @Html.DropDownListFor(m => m.StatusID, new SelectList(status, "ID", "Name"), "Select status...")
+
+                        </div>
+                    </div>
+                    <div class="row signup-row">
+                        <label class="col-md-3 control-label">Image</label>
+                        <div class="col-md-9">
+
+                            <input name="upload_File" type="file" />
+
+                        </div>
+
+                    </div>
+                    <div style="margin-top:10px" class="form-group">
+                        <!-- Button -->
+                        <div class="col-sm-12 controls">
+                            <input class="btn btn-primary" type="submit" value="Insert" />
+                            @* <input id="btn-fblogin" type="submit" class="btn btn-primary" value="Login with Facebook" />*@
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

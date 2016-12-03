@@ -1,0 +1,131 @@
+﻿@{
+    ViewBag.Title = "Sign Up";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userstatus = (List<BookManagement.Models.Status.UserStatus>)ViewBag.UserStatus;
+    var userrole = (List<BookManagement.Models.RoleModel.RoleModel>)ViewBag.UserRole;
+}
+@using BookManagement.Models.UserModel
+@model UserModel.CreateUser
+<div style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">Sign Up</div>
+            @*<div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>*@
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm("SignUp", "User", FormMethod.Post, new { @class = "form-horizontal", @role = "form", @id = "signpform", enctype = "multipart/form-data" }))
+            {
+                @*@Html.ValidationSummary(true)*@
+                <div id="signupalert" style="display:none" class="alert alert-danger">
+                    <p>Error:</p>
+                    <span></span>
+                </div>
+
+
+
+                <div class="row signup-row">
+                    <label for="email" class="col-md-3 control-label">Email</label>
+                    <div class="col-md-8">
+
+                        @Html.TextBoxFor(Model => Model.Mail, new { @class = "form-control", @placeholder = "Email Address", @id = "txtEmail" })
+                        <p class="text-danger" id="email_err_mess" hidden><br />This email is availabe!</p>
+                    </div>
+
+                </div>
+
+                <div class="row signup-row">
+                    <label for="firstname" class="col-md-3 control-label">Full Name</label>
+                    <div class="col-md-8">
+
+                        @Html.TextBoxFor(Model => Model.Name, new { @class = "form-control", @placeholder = "Full Name" })
+                    </div>
+                </div>
+
+                <div class="row signup-row">
+                    <label for="password" class="col-md-3 control-label">Password</label>
+                    <div class="col-md-8">
+                        @Html.PasswordFor(Model => Model.Password, new { @class = "form-control", @id = "pass" })
+                    </div>
+                    @*<span class="col-md-1 glyphicon glyphicon-warning-sign text-danger" id="eject_password_1"></span>*@
+                </div>
+                <div class="row" id="not_matched_pass" style="text-align:center"><p class="text-danger">Password does not match!</p></div>
+                <div class="row signup-row">
+                    <label for="password" class="col-md-3 control-label">Confirm Password</label>
+                    <div class="col-md-8">
+
+                        <input type="password" class="form-control" id="cPass" />
+                    </div>
+
+                </div>
+
+                <div class="row signup-row">
+                    <label for="icode" class="col-md-3 control-label">DOB</label>
+                    <div class='input-group date col-md-8' id='datetimepicker1'>
+
+
+                        @Html.TextBoxFor(m => m.DOB, new { @class = "form-control", @type = "date" })
+
+                    </div>
+
+                </div>
+                <div class="row signup-row">
+                    <label for="firstname" class="col-md-3 control-label">Gender</label>
+                    <div class="col-md-8">
+
+                        @Html.RadioButtonFor(Model => Model.Sex, "true") <label style="font-weight:normal">Male</label>
+                        @Html.RadioButtonFor(Model => Model.Sex, "false") <label style="font-weight:normal">Female</label>
+                    </div>
+                </div>
+                <div class="row signup-row">
+                    <label for="firstname" class="col-md-3 control-label">Phone</label>
+                    <div class="col-md-8">
+
+                        @Html.TextBoxFor(Model => Model.Phone, new { @class = "form-control", @placeholder = "Phone number" })
+                    </div>
+                </div>
+                <div class="row signup-row">
+                    <label for="firstname" class="col-md-3 control-label">Address</label>
+                    <div class="col-md-8">
+
+                        @Html.TextBoxFor(Model => Model.Address, new { @class = "form-control", @placeholder = "Address" })
+                    </div>
+                </div>
+                
+                <div class="row signup-row">
+                    <label class="col-md-3 control-label">Image</label>
+                    <div class="col-md-9">
+                        <input name="upload_File" type="file" />
+
+                    </div>
+
+                </div>
+                @*if (Session["USER_ROLE"] != null)
+                {
+                    if (Session["USER_ROLE"].Equals("1"))
+                    {
+                        <div class="row signup-row">
+                            <label for="firstname" class="col-md-3 control-label">Address</label>
+                            <div class="col-md-8">
+
+                                @Html.DropDownListFor(Model => Model.StatusID, new SelectList(userstatus, "ID", "Name"), "Select status...")
+                            </div>
+                        </div>
+                        <div class="row signup-row">
+                            <label for="firstname" class="col-md-3 control-label">Address</label>
+                            <div class="col-md-8">
+
+                                @Html.DropDownListFor(Model => Model.RoleID, new SelectList(userrole, "ID", "Name"), "Select role...")
+                            </div>
+                        </div>
+                    }
+                }*@
+                <div class="row signup-row">
+                    <!-- Button -->
+                    <div class="col-md-offset-3 col-md-9">
+                        <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

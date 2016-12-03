@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model PagedList.IPagedList<BookManagement.Models.Book>
+@using PagedList.Mvc;
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="">
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                {
+                    <input type="text" class="searchField" value="@ViewBag.SearchString" name="searchkey">
+                    <button type="submit" class="btn btn-success">
+                        <span class="glyphicon glyphicon-search"></span> Search
+                    </button>
+                    if (Session["USER_ROLE"] != null)
+                    {
+                        if (Session["USER_ROLE"].ToString().Equals("1"))
+                        {
+                            <a href="@Url.Action("InsertBook", "Home")" class="btn btn-success text-right">Insert Book</a>
+
+                        }
+                    }
+                }
+            </div>
+
+        </div>
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-shop-product">
+                        <div class="product-upper">
+                            <a href="@Url.Action("BookDetail", "Home", new { @bookID = item.ID})"><img src="@Url.Content("~/Content/Img/Books/" + item.Img_Link)" alt="@item.Name" class="thumbail-img" /></a>
+                        </div>
+                        <h2><a href="@Url.Action("BookDetail", "Home", new { @bookID = item.ID})">@item.Name</a></h2>
+
+                        @if (item.StatusID == 1)
+                        {
+                            <div class="product-carousel-price">
+                                <ins>@item.Price VND</ins>
+                            </div>
+                            <div class="product-carousel-price">
+                                <ins style="color:blue">@item.BookStatu.Name</ins>
+                            </div>
+                        }
+                        else if (@item.StatusID == 2)
+                        {
+                            <div class="product-carousel-price">
+                                <del>@item.Price VND</del>
+                            </div>
+                            <div class="product-carousel-price">
+                                <ins style="color:red">@item.BookStatu.Name</ins>
+                            </div>
+                        }
+
+                        <div class="product-option-shop">
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-pagination text-center">
+                    <nav>
+                        <ul class="pagination">
+                            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @searchkey = @ViewBag.SearchString }))
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
